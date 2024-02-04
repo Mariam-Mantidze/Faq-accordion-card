@@ -1,17 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const faqItems = document.querySelectorAll(".faq-item");
+  const question = document.getElementsByClassName("faq-question");
 
-  faqItems.forEach((item) => {
-    const question = item.querySelector(".faq-question");
-    const answer = item.nextElementSibling;
-
+  Array.from(question).forEach((question) =>
     question.addEventListener("click", () => {
       const commonParent = question.closest(".faq-item");
       const currentArrow = commonParent.querySelector(".arrow");
+      const answer = question.nextElementSibling;
 
-      answer.classList.toggle("active");
+      answer.classList.toggle("faq-answer-hidden");
 
-      if (answer.classList.contains("active")) {
+      if (answer.classList.contains("faq-answer-hidden")) {
         question.style.fontWeight = "700";
         answer.style.opacity = "1";
         answer.style.maxHeight = "60px";
@@ -22,6 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
         question.style.fontWeight = "";
         answer.style.maxHeight = "";
       }
-    });
-  });
+    })
+  );
 });
