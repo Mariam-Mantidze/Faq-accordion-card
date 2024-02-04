@@ -45,7 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 17px;
-  margin-top: 38px;
+  margin-top: 28px;
 }
 
 .line {
@@ -60,7 +60,10 @@ h1 {
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0px;
-  margin-top: 28px;
+}
+
+.first-item {
+  margin-top: 21px;
 }
 
 .arrow {
@@ -93,4 +96,67 @@ h1 {
   font-size: 13px;
   text-align: left;
   color: #4b4c5f;
+}
+.faq-question:hover {
+  color: #f47b56;
+}
+
+@media (min-width: 1040px) {
+  .photo-container-mobile {
+    display: none;
+  }
+
+  .photo-container-desktop {
+    display: block;
+    width: 964px;
+    background-image: url(./images/illustration-woman-online-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -77px 0px;
+  }
+
+  #box {
+    position: absolute;
+    top: 192.13px;
+    left: -90.07px;
+  }
+
+  .card {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -579px -305px;
+    flex-direction: row;
+    width: 920px;
+    padding: 65px 111px 83px 0;
+    justify-content: flex-end;
+    margin: 129px 239px 130px 281px;
+  }
+
+  h1 {
+    align-self: flex-start;
+  }
+
+  .faq-item {
+    width: 350px;
+  }
+
+  .question-section {
+    gap: 16px;
+  }
+
+  .first-item {
+    margin-top: 29px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .faq-answer {
+    margin-top: 11px;
+  }
 }
