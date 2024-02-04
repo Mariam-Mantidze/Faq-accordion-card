@@ -72,6 +72,7 @@ h1 {
   right: 0;
   top: 2px;
   height: 8px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .faq-item {
@@ -82,7 +83,8 @@ h1 {
 }
 
 .faq-answer {
-  display: none;
+  opacity: 0;
+  max-height: 0;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -90,7 +92,9 @@ h1 {
   text-align: left;
   color: #787887;
   margin-top: 12px;
+  transition: 0.4s ease-in-out;
 }
+
 .faq-question {
   cursor: pointer;
   font-size: 13px;

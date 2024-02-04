@@ -12,11 +12,15 @@ Array.from(question).forEach((question) =>
     answer.classList.toggle("faq-answer-hidden");
 
     if (answer.classList.contains("faq-answer-hidden")) {
-      answer.style.display = "block";
+      question.style.fontWeight = "700";
+      answer.style.opacity = "1";
+      answer.style.maxHeight = "60px";
       currentArrow.style.transform = "rotate(180deg)";
     } else {
-      answer.style.display = "";
+      answer.style.opacity = "";
       currentArrow.style.transform = "";
+      question.style.fontWeight = "";
+      answer.style.maxHeight = "";
     }
   })
 );
