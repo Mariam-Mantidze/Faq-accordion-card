@@ -1,26 +1,27 @@
-/* .arrow:hover {
-  transform: rotate(180deg);
-} */
-const question = document.getElementsByClassName("faq-question");
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
 
-Array.from(question).forEach((question) =>
-  question.addEventListener("click", () => {
-    const commonParent = question.closest(".faq-item");
-    const currentArrow = commonParent.querySelector(".arrow");
-    const answer = question.nextElementSibling;
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    const answer = item.nextElementSibling;
 
-    answer.classList.toggle("faq-answer-hidden");
+    question.addEventListener("click", () => {
+      const commonParent = question.closest(".faq-item");
+      const currentArrow = commonParent.querySelector(".arrow");
 
-    if (answer.classList.contains("faq-answer-hidden")) {
-      question.style.fontWeight = "700";
-      answer.style.opacity = "1";
-      answer.style.maxHeight = "60px";
-      currentArrow.style.transform = "rotate(180deg)";
-    } else {
-      answer.style.opacity = "";
-      currentArrow.style.transform = "";
-      question.style.fontWeight = "";
-      answer.style.maxHeight = "";
-    }
-  })
-);
+      answer.classList.toggle("active");
+
+      if (answer.classList.contains("active")) {
+        question.style.fontWeight = "700";
+        answer.style.opacity = "1";
+        answer.style.maxHeight = "60px";
+        currentArrow.style.transform = "rotate(180deg)";
+      } else {
+        answer.style.opacity = "";
+        currentArrow.style.transform = "";
+        question.style.fontWeight = "";
+        answer.style.maxHeight = "";
+      }
+    });
+  });
+});
