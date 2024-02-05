@@ -1,6 +1,6 @@
 # FAQ Accordion Card
 
-![FAQ Accordion Card](./design/desktop-design.jpg.png)
+![FAQ Accordion Card](./design/desktop-design.jpg)
 
 This project is an FAQ accordion card created using HTML, CSS, and JavaScript. It provides a user-friendly interface for viewing frequently asked questions and their answers in a collapsible format.
 
