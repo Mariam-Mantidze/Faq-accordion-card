@@ -109,17 +109,17 @@ h1 {
   color: #f47b56;
 }
 
-.answer-active {
+.active .faq-answer {
   opacity: 1;
   max-height: 60px;
   margin-bottom: 16px;
   margin-top: -7px;
 }
 
-.arrow-active {
+.active .arrow {
   transform: rotate(180deg);
 }
-.question-active {
+.active .faq-question {
   font-weight: 700;
 }
 
@@ -177,11 +177,8 @@ h1 {
     letter-spacing: 0px;
     text-align: left;
   }
-  .question-active {
-    font-weight: 700;
-  }
 
-  .answer-active {
+  .active .faq-answer {
     margin-top: -8px;
   }
 }
